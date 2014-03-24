@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+a {
+	color: black;
+	text-decoration: underline;
+}
+
+body {
+	text-align: center;
+}
+
+.caption {
+	font-size: 42pt;
+	text-align: center;
+}
+
+.smallprint {
+	font-size: 12px;
+	text-align: center;
+}
+
+.project {
+	text-align: center;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.center {
+	width: 300px;
+	background: #fff;
+	padding: 10px;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid;
+}
