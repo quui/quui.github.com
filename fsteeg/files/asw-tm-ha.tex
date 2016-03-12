@@ -1,0 +1,459 @@
+\documentclass[a4paper]{article}
+
+\usepackage[applemac]{inputenc}
+\usepackage{ngerman}
+%\usepackage{tipa}
+\usepackage{graphics,latexsym}
+\usepackage{longtable}
+\usepackage{rotating}
+
+\setlength\parskip{\smallskipamount} \setlength\parindent{0pt}
+\newcommand{\noun}[1]{\textsc{#1}}
+%\renewcommand{\section}{\normalfont}
+%\large\sffamily\bfseries}
+
+\author{Fabian Steeg}
+\date{\today}
+\title{\\ \\[10ex]\Large{Universit"at zu K"oln \\ Institut f"ur Linguistik
+}\\[5ex] \large{Proseminar ``Theorien und Modelle''\\ bei Prof. Hans-J"urgen
+Sasse}\\[10ex]
+\LARGE{\noun{Simon C. Diks ``Functional Grammar''}}\\[5ex]}
+
+%\\[5ex]
+
+% doppelzeilig -- fuer 1 1/2 den Wert 1.3 nehmen!
+\linespread{1.3}
+
+\begin{document}
+\begin{titlepage}
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+\tableofcontents \listoffigures
+%\listoftables
+\thispagestyle{empty}
+\end{titlepage}
+
+
+
+\section{Functional Grammar}
+
+``Functional Grammar'' (FG) wurde Ende der 1970er Jahre von Simon C. Dik in
+Amsterdam entwickelt -- ausdr"ucklich als Gegenmodell zum Standard-Modell der
+Tranformationsgrammatik von Noam Chomsky. Es ist das einzige vollst"andige
+solche Gegenmodell, das ausserhalb des MIT (wo Chomsky das Standardmodell
+ent\-wickelt hatte) ent\-standen ist. Nach dem Tod Diks 1995 wurde die Theorie
+vor allem durch seinen Mitarbeiter Kees Hengeveld weiterentwickelt und ist in
+ihrer heutigen Form der urspr"unglichen Formulierung noch sehr nah.
+
+\section{Allgemeine Annahmen "uber Sprache} \label{functional} \label{formal}
+
+Die zentrale Annahme Diks "uber Sprache ist ihr zweckgebundener Charakter als
+Mittel zur Kommunikation. Dik r"uckt damit die Funktion der Sprache in den
+Mittelpunkt. In diesem Sinne ist die Bezeichnung ``Functional Grammar'' zu sehen:
+Ein sprachliches Modell, das von der Funktion der Sprache, statt von ihrer
+"ausseren Form ausgeht. Mit dieser zentralen Annahme fordert Dik eine Abkehr
+von der fr"uher h"aufig angewandten heuristischen Reduktion der Ausblendung der
+Pragmatik. Konkret ist jedoch in der Behandlung der Pragmatik bei Dik nicht die
+allgemeine Pragmatik im Sinne von Sprechakten und Sprache als Handlung gemeint,
+sondern der Bereich der Diskurspragmatik, im Wesentlichen also das Verh"altnis
+der Informationsstruktur eines sprachlichen Ausdrucks zu seiner Realisierung,
+etwa bei der Behandlung von Topik und Fokus (Dik 1991:267ff.).
+
+Der von Dik beschriebene Grammatikformalismus ist in diesem Sinne
+pragmatikbasiert. Die n"achst wichtigste sprachliche Ebene ist aus Diks Sicht
+die Semantik, die -- selbst von der Pragmatik beeinflusst -- ihrerseits
+Einfluss auf die Syntax hat. Ein Beispiel f"ur eine solche Beeinflussung der
+Syntax w"are etwa eine Aktiv-Passiv-Alternation, die von den semantischen
+Rollen der Mitspieler in der "Ausserung bestimmt wird, und in diesem Sinne
+semantisch motiviert ist.
+
+Zugleich ist FG ein formales Modell, da es Methoden der
+formalen Semantik -- etwa Pr"adikatenlogik -- verwendet und den Anspruch der
+Implementierbarkeit als Computerprogramm und damit der Testbarkeit erhebt.
+
+\section{Vorstellungen "uber Grammatik}
+
+\subsection{Grundlegender Aufbau des Grammatikformalismus}
+
+Der Grammatik-Formalismus der FG besteht im wesentlichen aus
+der Beschreibung abstrakter Ausdr"ucke, der \emph{Underlying Clause Structures}
+(UCS), die schrittweise aus Pr"adikaten und Termen gebildet werden und die
+durch Ausdrucksregeln zu konkreten sprachlichen "Ausserungen in Bezug gesetzt
+werden oder diese erzeugen.
+
+\subsection{Aufbau der Underlying Clause Structure}
+
+\subsubsection{Pr"adikate}
+
+Die UCS werden aus Pr"adikaten und Termen gebildet. Einige elementare
+Pr"adikate und Terme sind Teil des Lexikons, andere werden aus diesen
+elementaren Pr"adikaten und Termen erstellt (durch \emph{predicate formation}
+und \emph{term formation}, siehe Abbildung \ref{fg} auf Seite \pageref{fg}). So
+w"are das Pr"adikat f"ur \emph{throw back} ein aus den elementaren Pr"adikaten
+f"ur \emph{throw} und \emph{back} abgeleitetes Pr"adikat. Alle Pr"adikate und
+Terme zusammen bilden den Fundus (\emph{fund}) einer Sprache.
+
+Pr"adikate sind Ausdr"ucke f"ur Eigenschaften oder Relationen. Es handelt sich
+hier um Pr"adikate im Sinne der Pr"adikatenlogik, nicht um die grammatische
+Relation des Pr"adikates aus der lateinischen Schulgrammatik. In diesem Sinne
+sind nicht nur Verben Pr"adikate, sondern alle Inhaltsw"orter einer Sprache. So
+ist ``haus(x)'' etwa ebenso ein Pr"adikat wie ``schlagen(x,y)''.
+
+Ein Unterschied der Pr"adikate in der FG zur klassischen Pr"adikatenlogik ist
+die Verwendung sogenannter Restriktoren. Wenn in der FG Pr"adikate
+zusammengesetzt werden, geschieht dies durch die Verwendung dieser
+Restriktoren, geschrieben als ``:'', etwa in der Form
+``japanisch(x):buddhistisch(x)''. Dies l"asst sich paraphrasieren mit ``Die
+Menge der x, f"ur die gilt: x ist japanisch, eingeschr"ankt auf die Menge der
+x, f"ur die gilt: x ist buddhistisch''. Die entsprechende pr"adikatenlogische
+Form w"are ``japanisch(x) \& buddhistisch(x)'', wobei das ``\&'' ein
+pr"adikatenlogisches ``UND'' ist. Der entsprechende Sachverhalt ist in beiden
+F"allen gleich. Der Unterschied besteht darin, dass das pr"adikatenlogische
+``\&'' umkehrbar ist, dass also ``japanisch(x) \& buddhistisch(x)'' aquivalent
+ist zu ``buddhistisch(x) \& japanisch(x)''. Bei den Restriktoren ist dies nicht
+der Fall und sie sind damit in der Lage, den Unterschied der sprachlichen
+"Ausserungen \emph{Der japanische Buddhist} und \emph{Der buddhistische
+Japaner} zu erfassen (Dik 1997, Kap. 6.2).
+
+Pr"adikate sind stets Teil eines Pr"adikatrahmens, der die Eigenschaften des
+Pr"adikats beschreibt. Ein Beispiel f"ur den Pr"adikatrahmen eines transitiven
+Verbs w"are etwa:
+
+\begin{quote}
+throw[V](x1:\textless animate \textgreater (x1))$_{Agent}$ (x2:\textless
+concrete\textgreater (x2))$_{Goal}$ (x3)$_{Direction}$
+\end{quote}
+
+Zun"achst erscheint die Wortform (throw), anschlie"send die Wortart (V). Im
+Folgenden sind die Argumentpositionen des Verbs beschrieben. Das Argument in
+der Mitspielerposition mit der semantischen Rolle des Agens muss belebt
+(animate) sein, der vom Sachverhalt betroffene Mitspieler
+(Goal\footnote{Allgemein hat sich f"ur die Rolle, die Dik \emph{Goal} nennt die
+Bezeichnung \emph{Patient} bzw. \emph{Patiens} durchgesetzt.}) -- hier der
+geworfene Gegenstand -- muss konkret (concrete) sein und das dritte Argument
+(mit der semantische Rolle Location) unterliegt keiner solchen
+Selektionsbeschr"ankung.
+
+Zu solchen nuklearen Pr"adikaten k"onnen nun die fakultativen sogenannten
+Satelliten hinzukommen, die Positionen einnehmen, die nicht vom Pr"adikatrahmen
+spezifiziert werden, etwa zu einer zeitlichen Pr"azisierung des Pr"adikats mit
+Hilfe von W"ortern wie \emph{gestern} oder \emph{bald}. Einen solchen um
+Satelliten erweiterten Pr"adikatrahmen nennt Dik einen erweiterten
+Pr"adikatrahmen (\emph{extended predicate frame}). Dies ist im Kasten
+``Predicate-Frames'' in Abbildung \ref{fg} auf Seite \pageref{fg} schematisch
+dargestellt.
+
+\subsubsection{Terme}
+
+Der zweite wesentliche Bestandteil einer UCS sind neben Pr"adikaten die Terme.
+Formal sind Terme die Argumente der Pr"adikate, semantisch sind es Ausdr"ucke,
+die Entit"aten referenzieren\footnote{Genau genommen schreibt Dik (1991:255),
+dass Terme den Adressaten instruieren, eine Entit"at zu identifizieren, die dem
+Profil des Terms entspricht.}. Beispiele f"ur Terme w"aren \emph{Das Haus} oder
+\emph{Die lila Plastikt"ute}. Es existieren nur sehr wenige elementare Terme,
+so sind lediglich Eigennamen und Personalpronomina als elementare Terme
+vorhanden, andere Terme, wie \emph{Die lila Plastikt"ute} werden aus
+Pr"adikaten erstellt. Terme sind also die Entit"aten, die durch ein Pr"adikat
+zueinander in Beziehung gesetzt werden.
+
+Eine Pr"adikation, die zwei Terme (\emph{the garden} und \emph{the dog})
+enth"alt w"are z.B.:
+
+\begin{quote}
+present: (definite singular x1: garden [N])$_{Location}$ (definite singular x2:
+dog [N])
+\end{quote}
+
+\subsubsection{Ebenen in der UCS}
+
+Innerhalb der UCS werden in Form von Funktionen drei verschiedenen Ebenen
+unterschieden:
+
+\begin{enumerate}
+  \item {"Ausserungssituation: Ebene der pragmatischen Funktionen wie Topik und
+  Fokus.}
+  \item {Mitspielerebene: Ebene der semantischen Funktionen wie Agent und Goal
+  (Patiens).}
+  \item {Ebene der Perspektive: Ebene der syntaktischen Funktionen Subjekt und
+  Objekt.}
+\end{enumerate}
+
+In diesem Sinne nehmen einzelne Elemente einer sprachlichen "Ausserung auf den
+verschiedenen Ebenen verschiedene Kategorien an. In dem Satz \emph{Peter kauft
+ein Eis} etwa ist \emph{Peter} zugleich Agens, Topik und Subjekt, w"ahrend
+\emph{Eis} zugleich Goal (Patiens), Fokus und Objekt ist.
+
+Der sprachliche Ausdruck, der durch die Ausdrucksregeln auf die UCS
+
+\begin{quote}
+present: (definite singular x1: garden [N])$_{Location}$ (definite singular x2:
+dog [N])
+\end{quote}
+
+bezogen (oder in einer Implementierung des Formalismus auch aus der UCS
+erzeugt) werden kann ist so noch nicht eindeutig. Der UCS entspricht etwa die
+"Ausserung \emph{The dog is in the garden}. In einer bestimmten
+"Ausserungssituation -- etwa in einer Aufz"ahlung der f"ur einen Einbruch zu
+"uberwindenden Hindernisse -- w"are aber folgende "Ausserung denkbar, die
+ebenfalls mit der UCS "ubereinstimmt: \emph{There is the dog in the garden}.
+Dieses Beispiel verdeutlicht die M"oglichkeiten, die eine Ber"ucksichtigung der
+pragmatischen Ebene bietet, denn durch die Kennzeichnung des
+Aufz"ahlungscharakters ist es m"oglich, die beiden sprachlichen "Ausserungen in
+der zugrunde liegenden Struktur zu unterscheiden (Dik 1997, Kap. 8.7.2).
+
+Die Unterscheidung der Ebene der semantischen Rollen, d.h. der Mitspieler und
+der syntaktischen (grammatischen) Relationen erm"oglicht die Beschreibung
+syntaktischer Alternationen wie der Passivierung ohne dass dabei die eine Form
+aus der anderen abgeleitet werden m"usste. So gibt es in einem Aktivsatz eine
+"Ubereinstimmung von Subjekt und Agens, w"ahrend bei einer "Ubereinstimmung von
+Subjekt und Goal (Patiens) in der UCS dieser ein Passivsatz entspr"ache.
+
+\subsubsection{Operatoren auf Pr"adikationen}
+
+Wenn wie beschrieben die Terme in die Pr"adikatrahmen eingesetz wurden, haben
+wir eine Pr"adikation, die die vollst"andige Proposition oder den Sachverhalt
+(\emph{State of Affair}, SoA) des Satzes enh"alt, jedoch noch nicht weiter
+spezifiziert ist. Dazu werden nun Operatoren auf die gesamte Pr"adikation
+angewandt, etwa in der UCS oben der Operator ``present'', der selbst wieder als
+ein Pr"adikat mit der vollen Pr"adikation als Argument gesehen werden kann.
+Ebenso werden in diesem Schritt Operatoren zum Modus (etwa Interrogativ oder
+Deklarativ) eingef"ugt.
+
+Diese nun voll spezifizierte Pr"adikation wird schlie"slich mit Hilfe von
+Ausdrucksregeln zu Form, Reihenfolge und Intonation spezifiziert und damit zu
+einer konkreten sprachlichen "Ausserung in Bezug gesetzt (bei der Beschreibung)
+bzw. in eine solche umgewandelt (bei der Generierung).
+
+\subsection{Zusammenfassung des Grammatikformalismus} \label{monostratal} \label{deszendent}
+
+Es handelt sich damit bei FG um ein monostratales Modell,
+da zwar zwischen der UCS und den sprachlichen Ausdr"ucken unterschieden wird
+und diese durch Ausdrucksregeln aufeinander bezogen werden, jedoch werden keine
+verschiedenen Ebenen angenommen, auf denen konkrete sprachliche "Ausserungen
+stehen, so sind etwa keine syntaktischen Derivationsmechanismen vorhanden. In
+diesem Sinne findet die Bildung der sprachlichen "Ausserungen schrittweise
+innerhalb einer Prozesskette, auf einer einzigen Ebene statt, wie in Abbildung
+\ref{fg} auf Seite \pageref{fg} deutlich wird, die den Aufbau einer FG zeigt.
+
+Die Pragmatikorientiertheit macht FG zu einem deszendenten Grammatikmodell, das
+von der Gesamtsituation ausgeht, in der eine "Ausserung get"atigt wird, im
+Gegensatz zu einem aszendenten Grammatikmodell, das von den kleinsten Teilen
+ausgeht, etwa von der Phonologie "uber die Morphologie zur Syntax.
+
+\begin{figure}
+\begin{center}
+\includegraphics{fg.png}
+\end{center}
+\caption{Aufbau einer FG (aus Dik 1991:250)} \label{fg}
+\end{figure}
+
+\section{Behandlung der Daten} \label{induktiv}
+
+Die Bedeutung von sprachlichen Daten setzt Dik im Allgemeinen sehr hoch an:
+
+\begin{quote}
+``Whenever there is some overt difference between two constructions X and Y,
+start out on the assumption that this difference has some kind of functionality
+in the linguistic system'' (Dik 1997, Kap. 1.6).
+\end{quote}
+
+Damit hat FG einen induktiven Charakter, da sie "ahnlich dem
+Bloomfieldschen Deskritptivismus von konkreten sprachlichen Daten ausgeht, im
+Gegensatz zu einem deduktiven Modell wie der Generativen Grammatik nach
+Chomsky, wo eine ideale, vom konkreten Sprachgebrauch abstrahierte
+Sprachkompentenz im Mittelpunkt der Theorie steht.
+
+In den zentralen Bereichen Pragmatik und Semantik ist die FG
+vor allem auf die Befragung von Informanten (Elizitierung) sowie die
+Konsultation der eigenen muttersprachlichen Einsichten (Introspektion)
+angewiesen.  Andere Quellen wie Experimente oder Korpora sind nicht ohne
+weiteres\footnote{Eine Generierung von semantischem Wissen w"are eventuell
+durch eine automatische Verarbeitung von Korpora, etwa zur Ermittlung
+paradigmatischer oder syntagmatischer Relationen m"oglich.} zur Ermittlung
+semantischen Wissens (etwa f"ur die Selektionsbeschr"ankungen in
+Pr"adikatrahmen) verwendbar.
+
+Zur Evaluierung des Gesamtmodells k"onnen dagegen auch in der FG Korpora und
+damit spontansprachliche Daten verwendet werden, etwa zur "Uberpr"ufung, ob
+"Ausserungen in Korpora durch den FG-Formalismus beschrieben werden k"onnen.
+
+\section{Anspruch des Modells} \label{kriterien} \label{mentalistisch} \label{universalistisch}
+
+Die Zielsetzung der FG ist sehr umfassend, Dik (1997, Kap. 1) formuliert
+folgende zentrale Frage: ``How does the natural language user (NLU) work?''.
+Diese Fragestellung kennzeichnet FG klar als Modell mit mentalistischem
+Anspruch.
+
+Dik identifiziert im Anschluss an die Formulierung dieser zentralen
+Fragestellung f"unf F"ahigkeiten des NLU, die essentielle Rollen f"ur die
+menschliche Kommunikation spielen:
+
+\begin{enumerate}
+  \item {\emph{linguistic capacity}: F"ahigkeit zur Produktion und
+  Interpretation sprachlicher Ausdr"ucke.}
+  \item {\emph{epistemic capacity}: F"ahigkeit zu Aufbau und Verwaltung einer
+  Wissensbasis, die zur Sprachverarbeitung genutzt wird.}
+  \item {\emph{logical capacity}: Die F"ahigkeit, Schlussfolgerungen aus dem
+  verf"ugbaren Wissen zu ziehen.}
+  \item {\emph{perceptual capacity}: F"ahigkeit, seine Umwelt wahrzunehmen und
+  bei der Sprachverarbeitung zu ber"ucksichtigen.}
+  \item {\emph{social capacity}: F"ahigkeit, die Situation bei der
+  Sprachverarbeitung mit zu ber"ucksichtigen.}
+\end{enumerate}
+
+Dar"uber hinaus formuliert Dik in Anspielung auf die von Chomsky geforderten
+drei Ad"aquatheitskriterien der Beschreibungs-, Erkl"arungs- und
+Beobachtungsad"aquatheit drei eigene, v"ollig andere Ad"aquatheitskriterien:
+
+\begin{enumerate}
+  \item {Pragmatische Ad"aquatheit: Direkte Folge der Grundannahme, dass
+  Sprache ein Mittel zur Kommunikation darstellt.}
+  \item {Psychologische Ad"aquatheit: Erkenntnisse aus der
+  psycho\-linguistischen Forschung zu Sprach\-erwerb, -ver\-ar\-bei\-tung und
+  -inter\-preta\-tion m"ussen ber"ucksichtigt werden.}
+  \item {Typologische Ad"aquatheit: Die Theorie soll auf Sprachen von
+  unterschiedlichem typologischem Status anwendbar sein.}
+\end{enumerate}
+
+Insbesondere durch den Anspruch der typologischen Offenheit erh"alt das Modell
+einen stark beschreibungsorientierten Charakter, da es eine solche Offenheit zu
+einem universellen Beschreibungswerkzeug machen w"urde, sowie einen
+universalistischen Anspruch, der es als Ziel sieht, allgemeing"ultige Aussagen
+"uber Sprache insgesamt, nicht "uber ein bestimmte Sprache oder Sprachfamilie
+zu machen.
+
+Der Anspruch der psychologischen Ad"aquatheit kennzeichnet FG,
+wie schon im Zusammenhang mit der zentralen Fragestellung erw"ahnt, als ein
+mentalistisches Modell, das wie etwa die generative Syntaxtheorie ein Modell
+f"ur die menschliche Sprachf"ahigkeit sein will, im Gegensatz zu rein
+anwendungs- bzw. beschreibungsorientierten Ans"atzen wie HPSG.
+
+FG geht im Gegensatz zur nativistischen Hypothese Chomskys
+davon aus, dass sprachliche Universale nicht angeborenen Eigenschaften
+entspringen sondern den Notwendigkeiten der menschlichen
+Kommunikation\footnote{In diesem Sinne w"are etwa die Tatsache, dass alle
+Sprachen eine Unterscheidung zwischen Funktions- und Inhaltsw"ortern haben, in
+der Notwendigkeit begr"undet, die Inhalte einer sprachlichen "Ausserung
+zueinander in Bezug zu setzen.} sowie der physischen und psychologischen
+Konstitution des Menschen\footnote{Etwa eine Einschr"ankung der
+Schachtelungstiefe von Nebens"atzen durch die begrenzten M"oglichkeiten des
+menschlichen Kurzzeitged"achnisses.}, und kann damit als nicht-nativistisches
+Modell charakterisiert werden.
+
+\section{Hauptaufgabe linguistischer Forschung}
+
+Ziel der Forschung im Rahmen der FG ist die Entwicklung eines
+sprachunabh"angigen Formalismus zur Sprachbeschreibung. Dazu ist eine
+ausgiebige Anpassung der bestehenden Formalismen an viele verschiedene Sprachen
+n"otig (Dik 1991:248). In diesem Sinne ist die Sprachbeschreibung ein zentraler
+Gegenstand der FG-Forschung.
+
+Aus dem Anspruch der Formalisierbarkeit ergibt sich ein weiteres
+Forschungsgebiet: Die Implementierung von FG auf einem Computer. Dik selbst hat
+seit den 1980er Jahren vor allem auf diesem Gebiet gearbeitet. Diks eigene und
+auch andere Implementierungen (etwa Samuelsdorff 1989) verwenden die
+logikorientierte Programmiersprache Prolog (\emph{Programming in Logic}), die
+sich aufgrund ihrer starken Orientierung an der Pr"adikatenlogik besonders zu
+eignen schien, eine Umsetzung ist jedoch auch in jeder anderen
+Programmiersprache m"oglich. Die Arbeiten in diesem Bereich konzentrieren sich
+stark auf das Gebiet der Generierung und abstrakten Darstellung von
+sprachlichen Ausdr"ucken, nicht auf die Verarbeitung (Parsing), die ebenso wie
+die Generierung Teil der \emph{linguistic capacity} ist (siehe Abschnitt
+\ref{kriterien} auf Seite \pageref{kriterien}).
+
+Dar"uberhinaus legen die Forderungen nach pragmatischer und psychologischer
+Ad"aquatheit (siehe Abschnitt \ref{kriterien} auf Seite \pageref{kriterien})
+eine gewisse Offenheit und interdisziplin"are Zusammenarbeit nahe, wenn
+Erkenntnisse relevanter F"acher wie Psychologie und Soziologie ber"ucksichtigt
+werden sollen.
+
+\section{Anwendungsorientiertheit und Anwendbarkeit}
+
+\subsection{Vorteile}
+
+Diks ``Functional Grammar'' scheint viele in anderen Modellen vernachl"assigte,
+jedoch zur vollst"andigen Sprachbeschreibung wichtige Aspekte von Sprache zu
+ber"ucksichtigen:
+
+\begin{itemize}
+  \item Eine Ber"ucksichtgung der Pragmatik -- etwa wie oben beschrieben bei
+  einer Aufz"ahlung oder zur Beschreibung des Unterschiedes zwischen den
+  Ausdr"ucken \emph{Buddhist Japanese} und \emph{Japanese Buddhist}.
+  \item  Die zentrale Rolle der Semantik -- etwa bei der Zuordnung von
+  \emph{who} an belebte und \emph{which} an unbelebte Mitspieler in einem
+  Relativsatz oder bei den Selektionsbeschr"ankungen der Argumente in
+  Pr"adikatrahmen.
+  \item Die Unterscheidung von semantischen Rollen und grammatischen Relationen
+  -- etwa zur Beschreibung von Aktiv-Passiv-Alternation ohne diese gegenseitig
+  auseinander abzuleiten.
+  \item Die Ber"ucksichtigung typologischer Eigenheiten vieler Sprachen -- etwa
+  in Form der \emph{Semantic Function Hierachy} (SFH) zur Subjektivierbarkeit
+  von Mitspielern mit bestimmten semantischen Rollen.
+\end{itemize}
+
+\subsection{M"ogliche Schw"achen und Probleme bei der Anwendung}
+
+Die Verwendung merkmalsemantischer Primitive zur Selektionsbeschr"ankung
+bestimmter Argumentpositionen in den UCS k"onnte in der Praxis zu den mit
+diesem sematischen Modell bekannten Problemen f"uhren, etwa bei relationalen
+Eigenschaften wie Verwandschaftsverh"altnissen, sowie bei Verben, graduellen
+Unterschieden und Farben. Die Kodierung der Feinsemantik im Lexikon stellt
+jedoch allgemein ein ungel"ostes Problem dar.
+
+Das Vorgehen, Verletzungen der Selektionsbeschr"ankungen nicht als
+ungrammatisch zu bezeichenen, sondern z.B. als Metapher zu behandeln stellt
+eventuell eine Immunisierungstrategie dar (etwa wenn keine spezielle
+Interpretationsstrategie ausgearbeitet wurde), die in diesem Fall Testbarkeit,
+Anwendbarkeit und den wissenschaftlichen Wert des Modells verringern k"onnte.
+
+Auch die aus der semantische Ausrichtung ergebende Konzentration auf
+Introspektion und Elizitierung zur Datengewinnung f"ur die Bestimmung von
+Selektionsbeschr"ankungen von Argumentpositionen in Pr"adikatrahmen k"onnte
+Probleme verursachen und den wissenschaftstheoretischen Wert der gewonnenen
+Daten schm"alern, da elizitierte und aus Introspektion gewonnene Daten durch
+die vorgegebene Fragestellung leicht missinterpretiert werden k"onnen, etwa
+wenn Einflussfaktoren, die "uber die Fragestellung hinaus gehen, nicht
+ber"ucksichtigt werden.
+
+Auch im Bereich der Operatoren zur zeitlichen Spezifizierung der Pr"adikation
+gehen der universelle Anspruch und die praktischen Erfordernisse auseinander,
+denn die auf dieser Ebene von Dik genannten Operatoren wie ``present'' und
+``progressive'' sind keine universellen Kategorien, doch die UCS hat den
+Anspruch vor Anwendung der Ausdrucksregeln sprachunabh"angig kodiert zu sein.
+
+\section{Zusammenfassende Charakterisierung des Modells}
+
+Zusammenfassend l"asst sich Simon C. Diks ``Functional Grammar'' als ein
+
+\begin{itemize}
+  \item{monostratales, nicht-derivationelles (s. Abschnitt \ref{monostratal} auf S. \pageref{monostratal})},
+  \item{deszendentes (s. Abschnitt \ref{deszendent} auf S. \pageref{deszendent})},
+  \item {induktives (s. Abschnitt \ref{induktiv} auf S. \pageref{induktiv})},
+  \item {mentalistisches, nicht-nativistisches (s. Abschnitt \ref{mentalistisch} auf S. \pageref{mentalistisch})},
+  \item {universalistisches (s. Abschnitt \ref{universalistisch} auf S. \pageref{universalistisch})},
+  \item {pragmatikbasiertes, und in diesem Sinne funktionales (s. Abschnitt
+  \ref{functional} auf S. \pageref{functional} sowie Abschnitt \ref{kriterien} auf S. \pageref{kriterien})} sowie
+  \item {beschreibungsorientiertes und testbares, und in diesem Sinne formales (s. Abschnitt \ref{formal} auf S. \pageref{formal} sowie Abschnitt \ref{kriterien} auf S. \pageref{kriterien})}
+\end{itemize}
+
+linguistisches Modell charakterisieren.
+
+% \newpage
+% \thispagestyle{empty}
+\section*{Bibliographie}
+
+\begin{description}
+\item [\textmd{\noun{Dik}}\textmd{,}]Simon C. 1991 {}``Functional Grammar'' In:
+\noun{Droste}, F. \& John E. \noun{Joseph} (eds.) \emph{Theory and Grammatical
+Description.} 247-274\emph{.}
+\item [\textmd{\noun{Dik}}\textmd{,}]Simon C. 1997 {}``The Theory of Functional
+Grammar''. Berlin, New York: Mouton de Gruyter.
+\item [\textmd{\noun{Samuelsdorff}}\textmd{,}]Paul-O. 1989 {}``Simulation of a
+Functional Grammar in Prolog'' In: \noun{Connolly}, John H. \& Simon C.
+\noun{Dik} (eds.) \emph{Functional Grammar and the Computer.} 29-44\emph{.}\item
+\end{description}
+
+\end{document}

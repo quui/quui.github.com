@@ -1,0 +1,337 @@
+\documentclass[titlepage,a4paper]{scrartcl}
+\usepackage{ngerman}
+
+%\usepackage[shell]{pdftricks}
+%\usepackage[utf-8]{inputenc}
+\usepackage[]{epsfig}
+%\usepackage[xypdf,all,graph]{xy}
+\usepackage[]{xypic,xyling}
+\usepackage{covington, synttree}
+
+
+\usepackage{multibib}
+\usepackage{natbib}
+
+%\newcites{literatur}{Normale Literatur}
+\newcites{abb}{Karten und Bilder}
+
+%% seps: open, closing, cit sep, author-year, sep author date, sep for common authors, optional arg for sep year and addidtion
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+
+
+\usepackage[safe]{tipa}
+
+\usepackage[sf]{titlesec}
+\usepackage{lscape, graphics}
+
+\newcommand{\noun}[1]{\textsc{#1}}
+\setlength\parskip{\smallskipamount}
+\setlength\parindent{0pt}
+
+% doppelzeilig 1.6 -- fuer 1 1/2 den Wert 1.3 nehmen!
+\linespread{1.3}
+%\usepackage{setspace}
+%\onehalfspacing
+
+\begin{document}
+
+
+\titlehead{}
+\subject{\large Universit"at zu K"oln, Geographisches Institut\\
+Mittelseminar ``Geographische Bildinterpretation'' bei Dr. Oliver B"odeker}
+\author{
+Fabian Steeg\\ \small
+steeg@netcologne.de
+}
+\date{\today}
+
+\title{
+%Problematik der Randstufenentstehung \\ im s"udlichen Afrika
+%Das k"ustennahe Relief \\im Nordwesten Namibias
+%Entstehung des Kontinentalrands\\ im Nordwesten Namibias
+%Die Enstehung der \\ s"udwestafrikanischen Randstufe
+Reliefgenese in Nordwestnamibia
+}
+
+\maketitle[-1]
+\tableofcontents
+\thispagestyle{empty}
+\enlargethispage{5cm}
+%\newpage
+\listoffigures
+\thispagestyle{empty}
+%\listoftables
+
+\newpage
+%\thispagestyle{empty}
+
+\section{"Uberblick}
+
+Gegenstand dieser Arbeit ist eine zusammenfassende Darstellung des Erkenntnisstandes zur Enstehung des Reliefs in Nordwestnamibia. Die traditionelle Vorstellung, ausgedr"uckt etwa in \cite{Hueser1989}, wonach beim Auseinanderbrechen Gondwanas als Schulter des zwischen S"udamerika und Afrika entstehenden Grabens eine geschlossene Randschwelle entstand, welche nachfolgend zur heutigen, nicht durchgehenden (in Nordwestnamibia) s"udwestafrikanischen Randstufe ('Grosse Randstufe', \emph{Great Escarpment}) erodierte, ist nicht mehr haltbar.
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=relief.jpg, width=14.5cm}}
+\end{center}
+\caption[Namibia: Relief und H"ohen]{Namibia: Relief und H"ohen \citepabb{NamibiaAtlas}}
+\label{relief-map}
+\end{figure}
+
+Neuere Untersuchungen liefern Hinweise auf eine "altere Anlage einiger T"aler \citep{HueserEtAl2003} vor der Zeit der permo-karbonen Vereisung der S"udhalbkugel (Lokalbezeichnung: Dwyka) sowie eine epigenetische, j"ungere Anlage von T"alern und eine h"ohere Bedeutung plattentektonischer Prozesse, die bis heute anhalten \citep{BrunotteAndSpoenemann1997} und sich durch Flexuren und Br"uche "au"sern. Eine solche Interpretation liefert deutlich schl"ussigere Erkl"arungen f"ur die beobachteten Formen -- insbesondere f"ur die Randstufenl"ucke im Norden Namibias (bei etwa 20--22$^\circ$ S, siehe auch Abbildung \ref{relief-map}) -- als die traditionelle Erkl"arung.
+
+\section{Randstufe und Randstufenl"ucke} \label{luecke}
+
+\subsection{Beschreibung}
+
+Das Relief S"udafrikas ist gekennzeichnet durch eine Randstufe, die die K"ustenregion vom Hochplateau im Inneren des Kontinents trennt. In Namibia weist diese im Norden -- bei 20--22$^\circ$ S -- eine L"ucke auf (siehe Abbildung \ref{relief-map}).
+
+Das Relief S"udafrikas ist vor allem im Pr"akambrium entstanden. Sp"atere Reliefver"anderungen gehen nicht auf Orogenese sondern auf plattentektonische Aktivit"at zur"uck, so auch die Entstehung der  Randstufe. Die Randstufe stellt die einzige nach dem Kambrium entstandene Gro"sform in diesem Gebiet dar und ist damit von au"serordentlicher Bedeutung f"ur die Geomorphologie des s"udlichen Afrika \citep{Hueser1989}.
+
+W"ahrend die tektonischen Beschaffenheiten des Schelfbereichs vor der K"uste Namibias durch geologische Untersuchungen gut erforscht sind, traf dies f"ur das Festland lange nicht zu. Eine Untersuchung der plattentektonischen Auswirkungen in diesem Bereich erfolgte erst relativ sp"at, z.B. durch \cite{BrunotteAndSpoenemann1997}.
+
+\begin{figure}
+\begin{center}
+\fbox{\epsfig{file=namibia-sat.jpg, width=14.5cm}}
+\end{center}
+\caption[Satellitenaufnahme: Bruchst"orungen in Nordwestnamibia]{Satellitenaufnahme k"ustenparallel streichender Bruchst"orungen in Nordwestnamibia; Quelle: \citeabb{GoogleEarth}; der Ausschnitt entspricht dem der Abbildung in \cite{BrunotteAndSpoenemann1997}}
+\label{sat}
+\end{figure}
+
+Das s"udliche Afrika hat sich seit dem Zerbrechen Gondwanas vor etwa 100 Mio. Jahren um 1000 km nach Norden bewegt, was tektonische Aktivit"aten -- etwa in Form von Erdbeben oder Bruchst"orungen (die "uberwiegend K"ustenarallel streichen, siehe Abbildung \ref{sat}) -- verursacht. In diesem Zusammenhang stellt sich die Frage nach den Auswirkungen dieser Aktivit"aten auf die Landoberfl"achen, die vor allem mit morphotektonischen Mitteln gekl"art werden k"onnen, da inzwischen fl"achendeckend topographische Karten sowie Satelliten- und Luftbilder zur Verf"ugung stehen, die Studien des Reliefs erm"oglichen \citep{BrunotteAndSpoenemann1997}.
+
+\subsection{Erosive Interpretation}
+
+Traditionell wurde die Randstufe durch Abtragung einer urspr"unglich durchg"angigen Randschwelle erkl"art, welche beim Auseinanderbrechen Gondwanas entstanden sei. Die Randstufenl"ucke wurde durch die weniger resistenten, alten Damara-Granite erkl"art (\citealt{Hueser1989}, vgl. Abbildung \ref{gestein-map}), welche schneller erodiert worden seien. Dieser Vorstellung entspricht die Herangehensweise an die Problematik: \cite{Hueser1989} etwa formuliert im Zusammenhang mit der Genese des Reliefs in der Region 4 offene Fragen zur Enstehung der urspr"unglichen Randschwelle sowie 4 Fragen zur Entwicklung der Randschwelle zur heutigen Randstufe.
+
+\begin{figure}
+\begin{center}
+\fbox{\epsfig{file=gestein.jpg, width=14.5cm}}
+\end{center}
+\caption[Namibia: Geologie]{Namibia: Geologie \citepabb{NamibiaAtlas}}
+\label{gestein-map}
+\end{figure}
+
+\subsection{Plattentektonische Interpretation} \label{tektonik}
+
+Gegen die Erkl"arung der L"ucke durch geringere Erosionsresistenz spricht, dass auch im Gebiet, in dem die Randstufe am deutlichsten ausgebildet ist, Damara-Granite den Untergrund bilden (siehe Abbildungen \ref{relief-map} und \ref{gestein-map}). Gegen eine Entstehung des Reliefs als durchg"angige Randschwelle beim Zerbrechen Gondwanas sprechen auch epigenetische Durchbruchst"aler, die ein geringeres Alter der Formen nahelegen. \cite{BrunotteAndSpoenemann1997} interpretieren die Randstufe als K"ustenflexur.
+ 
+ \subsubsection{"Uberblick}
+
+Die morphographische Analyse von \cite{BrunotteAndSpoenemann1997} hat gezeigt, dass eine durchg"angige Randstufe im eigentlichen Sinn nicht vorhanden ist. Es finden sich Indizien f"ur eine epigenetische Entwicklung der Durchbruchst"aler und Hinweise auf ``junge epirogene Verbiegungen der Oberfl"ache'' (\citealt[5]{BrunotteAndSpoenemann1997}, vgl. auch Abbildung \ref{hydro-map}), die einzige ``befriedigende Erkl"arung'' \citep[11]{BrunotteAndSpoenemann1997}  f"ur die Anordnung der Hauptwasserscheiden, die diagonal zu den Hauptstrukturen des Untergrundes verlaufen.
+
+\subsubsection{Morphographie}
+
+\cite{BrunotteAndSpoenemann1997} untersuchen etwa eine Senke s"udlich von Sesfontein; hier werden zwei Umst"ande als Argumente gegen eine rein erosive Entstehung angef"uhrt: 
+
+\begin{enumerate}
+\item Eine nur teilweise und unregelm"a"sige Ausr"aumung spricht gegen eine formgebend geringere Gesteinsresistenz.
+\item Es lassen sich geradlinige, grabenartige Fortsetzungen der Mulde nach Norden und nach S"uden beobachten, die offenbar Bruchlinien darstellen.
+\end{enumerate}
+
+\cite{BrunotteAndSpoenemann1997} interpretieren die Form daher nicht als erosiv entstandene Mulde sondern als Zerrungsspalte. Eine weitere, fr"uher durch Resistenzunterschiede erkl"arte Form, die von \cite{BrunotteAndSpoenemann1997} auf tektonische Impulse zur"uckgef"uhrt wird, ist eine Stufe n"ordlich von Sesfontein, die vom \emph{Robbie's Pass} gequert wird ('Robbies Stufe'). Die Verbindung der Konfiguration der Talwasserscheiden "ostlich des Steilanstiegs der Stufe mit der Tatsache, dass die Stufe an drei Stellen von epigenetischen T"alern gequert wird, die unabh"angig vom Untergrund verlaufen, veranlasst \cite{BrunotteAndSpoenemann1997} zur Interpretation der Stufe als Bruchstufe statt als Rumpfstufe (Denudationsstufe). Zum gleichen Schluss gelangt die Untersuchung auch f"ur die Khowarib-Stufe, wobei hier f"unf zentrale Argumente vorgebracht werden:
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=profile.jpg, width=14.5cm}}
+\end{center}
+\caption[Profile "uber das Khowarib-Plateau]{(a) Profile "uber das Khowarib-Plateau; (b) L"angsprofile der Quert"aler des Khowarib-Plateaus; aus \cite{BrunotteAndSpoenemann1997}}
+\label{profile}
+\end{figure}
+
+\begin{enumerate}
+
+\item S"udlich der Schlucht finden sich ausgedehnte Phyllitschiefer, was eine Resistenzstufe ausschlie"st.
+\item Der Verlauf der Stufe stimmt nur teilweise mit dem Verlauf der Faltenstruktur der Damara-Granite "uberein.
+\item Im Phyllitschiefer fand sich eine Bruchst"orung, die darauf hinweist, dass Bruchtektonik bei der Enstehung der Stufe eine Rolle spielten.
+\item In der Verl"angerung des Stufenfu"ses in Richtung S"uden finden sich in den Eten\-deka-Basalten Bruchlinien, die junge Bruchtektonik beweisen.
+\item Die Entstehung des epigenetischen Durchbruchstals des Hoanib erforderte eine Absenkung des Sesfontein-Beckens, was hier nur durch eine Abschiebung zu erkl"aren ist \citep{BrunotteAndSpoenemann1997}.
+
+\end{enumerate}
+
+Beide Seiten der Khowarib-Schlucht sind analog ausgebildet (vgl. Abbildung \ref{profile}a), weshalb f"ur beide Seiten des von der Schlucht gequerten Khowarib-Plateaus eine Entstehung als Bruchstufe angenommen werden kann. Weitere, fr"uher als "aolisch-fluvialen Ursprungs gekennzeichnete Senken werden in der Untersuchung auf Staffelbr"uche zur"uckgef"uhrt.
+
+\subsubsection{Morphogenese}
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=hydro.jpg, width=14.5cm}}
+\end{center}
+\caption[Namibia: Hydrographie]{Namibia: Hydrographie \citepabb{NamibiaAtlas}}
+\label{hydro-map}
+\end{figure}
+
+\cite{BrunotteAndSpoenemann1997} beschreiben die Genese des Reliefs in Nordwestnamibia auf Grundlage alter Landobefl"achen. Eine solche Interpretation werde durch zwei Aspekte erschwert:
+
+\begin{enumerate}
+
+\item Wiederaufgedeckte Pr"a-Dwyka- und Pr"a-Etjo-Fl"achen k"onnen als j"ungere Fl"achen fehlinterpretiert werden; Die Sedimente der Karoo-Serie sind zur morphogenetischen Interpretation unbrauchbar, da sie in die Denudation einbezogen sind (siehe auch Abschnitt \ref{epigenetisch}).
+\item Durch Dislozierung von Fl"achen kann die Anzahl von Stockwerken fehlinterpretiert werden; die Untersuchung von \cite{BrunotteAndSpoenemann1997} erfolgt daher in einem Gebiet, in dem Dislozierungen ausgeschlossen werden k"onnen.
+
+\end{enumerate}
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=rainfall-variation.jpg, width=14.5cm}}
+\end{center}
+\caption[Namibia: Niederschlagsvariabilit"at]{Namibia: Niederschlagsvariabilit"at \citepabb{NamibiaAtlas}}
+\label{variab}
+\end{figure}
+
+Im Gebiet des Khowarib-Plateaus lassen sich Altfl"achen nachweisen; in der Khowarib-Schlucht selbst finden sich junge Feinsedimente (siehe auch Abschnitt \ref{feinsedimente}); 950 bis 1050 m dar"uber findet sich ein Stockwerk mit Talm"aandern und Umlaufbergen, die eine epigenetische Talentwicklung beweisen, ausgehend von einer Fl"ache in etwa 1200 m  H"ohe \citep[12]{BrunotteAndSpoenemann1997}. Reste dieser Fl"ache sind die in Abbildung \ref{profile}a erkennbaren Gipfelfluren. Ebenfalls aufgrund vorhandener Talm"aander und Umlaufberge vermuten \cite{BrunotteAndSpoenemann1997} eine weitere epigenetische Talgenese, ausgehend von einer Fl"ache in etwa 1400 m. Das Gef"alleprofil des Aaprivier (siehe Abbildung \ref{profile}b) ist ein Hinweis auf eine relativ junge tektonische Bewegung der westlichen Khowarib-Stufe.
+
+\subsubsection{Plattentektonisches Modell}
+
+Die Morphogenese wird als Ergebnis der Untersuchung in folgende Phasen eingeteilt (in Abbildung \ref{profile} finden sich Querprofile "uber das Khowarib-Plateau mit den vermuteten alten Landoberfl"achen):
+
+\begin{enumerate}
+\item Pr"ariftphase: Die Oberfl"ache von Gondwana wird kuppelartig aufgew"olbt, durch Abtragung entsteht eine Landoberfl"ache (pr"aHR3).
+\item Riftbildungsphase: Gondwana zerbricht und es bildet sich der Mittelatlantische R"ucken, dessen Schultern den sp"ateren Schelfrand des afrikanischen Kontinents bilden; durch die neue Erosionsbasis entsteht eine weitere Landoberfl"ache (pr"aHR2).
+\item Postriftphase 1: Durch eine tektothermische Hebung kommt es zu verst"arkter Abtragung und dadurch zur Bildung einer weiteren Landoberfl"ache (pr"aHR1).
+\item Postriftphase 2: Die kontinentale Randabdachung biegt sich auf; dies stellt eine isostatische Ausgleichbewegung dar, die als Reaktion auf die vorherige Abtragung auftrat. Diese Aufbiegung f"uhrt zur Bildung der Hauptrumpffl"ache (HR). Die zweite Postriftphase h"alt bis heute an \citep{BrunotteAndSpoenemann1997}.
+\end{enumerate}
+
+In diesem Sinn interpretieren \cite{BrunotteAndSpoenemann1997} das Relief in Nordwestnamibia als mehrphasige, aus Br"uchen und Flexuren entstandene Form, einem der urspr"unglichen Interpretation als Abtragungsstufe wiedersprechender Befund. Die Prozesse der Reliefformung halten dabei bis heute an.
+
+Ein anderes Beispiel f"ur eine solche mehrphasige, durch Rifting gepr"agte Landschaft mit mehreren tischebenen, tafelartigen Landoberfl"achen ist etwa der Fish River Canyon (siehe Abbildung \ref{canyon}) im S"uden Namibias.
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=tillite.jpg, width=14.5cm}}
+\end{center}
+\caption[Diagenetisch verfestigte Dwyka-Sedimente in einem Bohrkern]{Diagenetisch verfestigte Dwyka-Sedimente in einem Bohrkern \citepabb{CapeTown2003}}
+\label{tillite}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=FishRiverCanyonNamibia.jpg, width=13.5cm}}
+\end{center}
+\caption[Fish River Canyon: alte Landoberfl"achen]{Alte Landoberfl"achen am Fish River Canyon \citepabb{Wikimedia2003}}
+\label{canyon}
+\end{figure}
+
+\section{Durchbruchst"aler}
+
+\subsection{Episodische Fl"usse und Dwyka-Sedimente}
+
+Im Nordwesten Namibias finden sich vier gr"o"sere episodische Fl"usse (Regionalbezeichnung \emph{Riviere}, niederl"andisch f"ur 'Fluss'), die in den Atlantik entw"assern. Die gro"sen Riviere von Norden nach S"uden sind Hoanib, Uniab, Huab, Ugab, Omaruru, Swakop und Kuiseb (\citealt{Hueser1989}, vgl. Abbildung \ref{hydro-map}).
+
+Die Riviere weisen als Gemeinsamkeiten ihre vom anstehenden Gestein gepr"agten Talquerprofile sowie ``unausgereifte'' \citep{HueserEtAl2003} Tall"angsprofile auf. In diesem Bereich ist eine Randstufe ``nicht eindeutig zu lokalisieren'' (\citealt[8]{HueserEtAl2003}, in diesem Bereich befindet sich die zuvor beschriebene Randstufenl"ucke). Das Gebiet ist ein arider bis hyperarider Raum und gekennzeichnet durch oft lokal sehr begrenzte Starkniederschlagsereignisse in Abst"anden von viele Jahren (siehe auch Abbildung \ref{variab}).
+
+In vielen dieser Flusst"aler finden sich Sedimente aus der Zeit der permo-karbonen Vereisung der S"udhalbkugel (Lokal: Dwyka), etwa Schotter, die mitunter Gr"o"sen aufweisen, die in dieser Region am besten durch den hohen Druck austretendener Schmelzwasser in Gletschern zu erkl"aren und daher wohl  fluvio-glazialen Ursprungs ist (siehe Abbildung \ref{flussschotter}) sowie weitere glaziale Sedimente der Dwyka-Vereisung (siehe Abbildung \ref{tillite}).
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=flussschotter-skizze.jpg, width=14.5cm}}
+\end{center}
+\caption[Skizze: Dwyka-zeitliche fluvio-glaziale Sedimente]{Dwyka-zeitliche fluvio-glaziale Sedimente; Skizze, angefertigt nach einer Fotografie \citepabb{Seminar}}
+\label{flussschotter}
+\end{figure}
+
+\subsection{Interpretation als Glazialt"aler}
+
+\subsubsection{Problematik}
+
+Aufgrund der oben beschriebenen Dwyka-Sedimente wurden die T"aler als glazigen interpretiert. Als zus"atzliches Argument wurden Schleifspuren vorgebracht, die als Gletscherschrammen interpretiert wurden; solche Spuren k"onnen aber -- insbesondere unter den lokalen klimatischen Bedingungen -- auch von Schuttransport verursacht sein (\citealt{BrunotteAndSpoenemann1997}, siehe auch Abschnitt \ref{epigenetisch}).
+
+Dennoch sind die Sedimente ein Indiz f"ur eine m"ogliche Dwyka-zeitliche Entstehung der T"aler \citep{HueserEtAl2003}. Eine solche Interpretation  birgt zwei Probleme in sich, von denen das erste als grunds"atzlich gekl"art, das zweite als grunds"atzlich ungekl"art charakterisiert werden kann \citep{HueserEtAl2003}:
+
+\begin{enumerate}
+\item Die Annahme einer dwyka-zeitlichen Entstehung der T"aler impliziert eine damals vorhandene, nach Westen gerichtete Abdachung, um ein Abflie"sen der Gletscher in T"aler nach Westen zu erm"oglichen.  \cite{Stollhoven1999} konnte nachweisen, dass es bereits vor dem Auseinanderbrechen Gondwanas zwischen dem heutige S"udamerika und dem heutigen Afrika eine Tiefenlinie gab, die sogar marin geflutet war, belegt durch marine Sedimente \citep{HueserEtAl2003}.
+\item Das zweite Problem liegt in der Erkl"arung der heute offenliegenden T"aler, die in den 200 Millionen Jahren seit ihrer angenommenen Entstehung einer ``"au"serst wechselvolle[n] Geschichte'' \citep{HueserEtAl2003} unterlagen und f"ur die daher die Tatsache zu erkl"aren ist, dass das Relief ausgerechnet bis auf das Niveau der urspr"unglichen T"aler wieder abgetragen wurde.
+\end{enumerate}
+
+\subsubsection{Reliefversch"uttungsphasen}
+
+F"ur den zweiten Punkt sind vor allem zwei reliefversch"uttenden Phasen bedeutsam:  Die Karoo-Folge, beginnend mit den Dwyka-Sedimenten, nachfolgend erg"anzt durch Etjo-Ablagerungen im Trias. Die zu dieser Zeit eingebrachten sandigen Sedimente entwickleten sich zum heutige Etjo-Sandstein (siehe auch Abbildung \ref{etjo}). Von dieser Versch"uttung waren vor allem die Tiefenlinien des Reliefs betroffen.
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=etjo.jpg, width=14.5cm}}
+\end{center}
+\caption[Waterberg: Etjo-Sandstein]{Senkrecht gekl"ufteter Etjo-Sandstein am Waterberg \citepabb{TUFreiberg2003}}
+\label{etjo}
+\end{figure}
+
+Eine zweite Phase bildet die anschlie"sende F"orderung von Flugbasalten, die beim Auseinanderbrechen Gondwanas entstanden und im Gegensatz zur ersten Reliefversch"uttung weitfl"achige Ablagerungen von ``wesentlich gr"osserer M"achtigkeit'' \citep{HueserEtAl2003} hinterlie"sen. Auch in dieser Phase wurden naturgem"a"s besonders Tiefenlinien und T"aler versch"uttet.
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=etendeka.jpg, width=14.5cm}}
+\end{center}
+\caption[Etendeka-Basalte am Brandberg]{Etendeka-Basalte am Brandberg \citepabb{CapeTown2007}}
+\label{etendeka}
+\end{figure}
+
+Es stellt sich insbesondere f"ur diese zweite Phase der Versch"uttung die Frage, wie die Basaltausr"aumung dieser Ablagerungen exakt auf das Niveau der urspr"uglichen T"aler zu erkl"aren ist. Aus der Tatsache, dass die ''einst wohl fl"achenhaft verbreiteten'' \citep{HueserEtAl2003} Basalte heute nur noch in Form einiger Tafelberge vorhanden sind (siehe auch Abbildung \ref{etendeka}), schlie"sen \cite{HueserEtAl2003} zwei Dinge:
+
+\begin{enumerate}
+\item Die Ausr"aumung muss "uber lange Zeitr"aume erfolgt sein und habe ``sicherlich schon in der Kreide'' \citep{HueserEtAl2003} begonnen.
+\item Die Abtragung der leichten Basalte muss durch klimatische Prozesse geschehen sein; dazu muss eine Zunahme an Feuchtigkeit angenommen werden, da Basalte unter ariden Bedingungen abtragungsresistenter sind. Ein Wandel des ariden Etjo-Klimas zu einem feuchteren Klima ist durch die "Offnung des S"udatlantiks und die dadurch entstehende N"ahe zum Meer erkl"arbar, allerdings fehlen f"ur den entsprechenden Zeitraum in der Region ``weitgehend die geowissenschaftliche Belege'' \citep{HueserEtAl2003}; es finden sich jedoch einige Hinweise, etwa in Form von Mineralen, die starke chemische Reaktionen (unter feucht-warmem Klima) voraussetzen (z.B. Rutil und Turmalin) oder Eisenoxide auf Sandsteinresten \citep{HueserEtAl2003}.
+\end{enumerate}
+
+Aufgrund des oben erw"ahnten Fehlens geowissenschaftlicher Belege f"ur den Zeitraum Kreide und Terti"ar in der Region ist die Frage der Talgenese in Namibia Grundlage f"ur ``kontroverse Diskussionen'' \citep{HueserEtAl2003}.
+
+\subsection{Epigenetische Interpretation} \label{epigenetisch}
+
+Die Dwyka-Sedimente lassen jedoch nicht "uberall so weitreichend auf eine Dwyka-zeitliche Anlage der T"aler schlie"sen. Der Grund daf"ur ist, dass die Sedimente h"aufig nicht \emph{in situ} liegen, sondern tektonisch verstellt sind \citep{BrunotteAndSpoenemann1997}. 
+
+So ist etwa das Gomatum-Tal von \cite{Martin1969} als Glazialtal interpretiert worden, w"ahrend \cite{BrunotteAndSpoenemann1997} es als Zerrungsspalte indentifizieren konnten. Grundlage daf"ur bilden die erw"ahnte tektonische Verstellung sowie die Tatasache, dass die Talflanken ``puzzleartig ineinanderpassen'' \citep{BrunotteAndSpoenemann1997}. Die Schleifspuren, vormals als Gletscherschrammen interpretiert, werden f"ur das Gomatum-Tal durch eine m"ogliche Verschiebung erkl"art, die quer zur Nord-S"ud-Dehnung verlaufen sein k"onnte.
+
+Ein Erkl"arung f"ur das Vorhandensein der Dwyka-Sedimente k"onnte folgenderma"sen lauten: Grabenbr"uche, die vor der Dwyka-Vereisung bestanden, wurden vom Gletscher mit Sedimenten aufgef"ullt und anschlie"send mit Etendeka-Basalten bedeckt. Nachdem diese mitunter 1000 m m"achtigen Sedimente abgetragen waren, konnten die in den Grabenbr"uchen gesch"utzten Dwyka-zeitlichen Sedimente von Fl"ussen freigelegt werden und finden sich damit in den heutigen T"alern. In einem solchen Szenario lassen die in den T"alern vorhandenen Dwyka-Sedimente keine R"uckschl"usse auf eine Entstehung der T"aler zur Dwyka-Vereisung zu \citepabb{Seminar}.
+
+\cite{BrunotteAndSpoenemann1997} bezeichnen dementsprechend die Interpretation der T"aler als Glazialt"aler aufgrund der j"ungeren epigenetischen Entwicklung (siehe Abschnitt \ref{tektonik}) als ''nicht haltbar'' \citep[11]{BrunotteAndSpoenemann1997}. Da die Fl"usse unabh"angig vom Gestein verlaufen handelt es sich um vererbte, epigenetische T"aler; im Bereich von Bruchstufen kommt es zur Bildung antezedenter T"aler (siehe auch Abschnitt \ref{tektonik}).
+
+\subsection{Talgenese im Terti"ar und Quart"ar} \label{feinsedimente}
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=zeugenberge-skizze.jpg, width=14.5cm}}
+\end{center}
+\caption[Skizze: Zeugenberge von Landoberfl"achen des Terti"ars]{Zeugenberge von Landoberfl"achen des Terti"ars; Skizze, angefertigt nach einer Fotografie \citepabb{Seminar}}
+\label{zeugen-skizze}
+\end{figure}
+
+Belegbar ist, dass die T"aler zumindest zu Beginn der Aridisierung des afrikanischen Kontinentalrandes bereits vorhanden waren, denn durch die sp"atestens im oberen Mioz"an einsetzende Aridisierung wurde klastisches Material gef"ordert, das die T"aler versch"uttete. Dieses Material l"asst sich etwa in Tafelbergen im Ugab-Tal nachweisen (\citealt[91]{HueserEtAl2003}, siehe auch Abbildung \ref{zeugen-skizze}).
+
+Im Zuge der Aridisierung des s"udwestafrikanischen Kontinentalrandes wandelten sich die Fl"usse von m"oglicherweise ganzj"ahrig wasserf"uhrenden (perennierenden), in den Atlantik entw"assernden (exorh"eischen) Fl"ussen zu periodischen und schlie"slich zu episodischen Fl"ussen. Eine (erneute) Ausr"aumung dieser Versch"uttung ist durch eine tektonische Hebung nach der Ausr"aumung der Basalte zu erkl"aren \citep{HueserEtAl2003}.
+
+Als j"ungste Auff"ullung der T"aler finden sich feink"ornige, l"oss"ahnliche Sedimente in vielen Rivieren (siehe Abbildung \ref{silt}). F"ur die Akkumulation der Sedimente nennen \cite{HueserEtAl2003} neben den nicht immer vorhandenen D"unenblockaden zwei Ursachen:
+
+\begin{figure}
+\begin{center}
+ \fbox{\epsfig{file=silt.jpg, width=14.5cm}}
+\end{center}
+\caption[Junge Feinsedimente: Amspoort-Silt]{Junge Feinsedimente im Hoanib: Amspoort-Silt; aus: \cite{HueserEtAl2003}, Bildquelle: \citeabb{Seminar}}
+\label{silt}
+\end{figure}
+
+\begin{enumerate}
+
+\item Sedimentation durch auslaufendes Hochwasser; diese Vorstellung impliziert eine immer freie Hauptabflusslinie und geht damit nicht von einer Erosionsphase aus; dies entspricht der heutigen fluvialen Dynamik und erlaubt damit keine pal"aoklimatischen Schl"usse. Belege f"ur diese Vorstellung finden sich etwa am Hoanib, wo nachgewiesen werden konnte, dass j"ungere Sedimentschichten durch Hochwasserereignisse verursacht sind \citep[93]{HueserEtAl2003}.
+\item Eine gegens"atzliche Vorstellung deutet die Sedimente nicht als Ergebnisse von starken Abfl"ussen sondern im Gegenteil als mehrphasig abgelagerte Sedimente, verursacht von einem durch Trockenheit bedingten Auslaufen der Fl"usse bevor diese die M"undung erreichten; in dieser Weise wird Schicht auf Schicht gelagert. Beleg f"ur diese Vorstellung ist vor allem die M"achtigkeit der Sedimente. Im Rahmen dieser Vorstellung w"aren die Sedimente ein ``geowissenschaftliches Archive des j"ungeren Quart"ars'' \citep[93]{HueserEtAl2003}.
+
+\end{enumerate}
+
+Eine eindeutige Interpretation dieser j"ungsten Auff"ullungnen der T"aler wird erschwert durch Umlagerungsprozesse und Zwischensedimentationen \citep{HueserEtAl2003}.
+
+\newpage
+\section{Fazit}
+
+Zusammenfassend l"asst sich damit zur Entstehung des Reliefs in Nordwesnamibia Folgendes festhalten: Eine Erkl"arung der Randstufe als reine Abtragungsform einer ehemals geschlossenen Randschwelle \citep{Hueser1989} ist nicht haltbar. Stattdessen handelt es sich zumindest regional um Altformen, gebildet im oberen Pal"aozoikum, die heute wiederaufgedeckt sind \citep{HueserEtAl2003} sowie um Flexuren und bruchtektonische Formen mit epigenetischen Durchbruchst"alern \citep{BrunotteAndSpoenemann1997}. Insgesamt sind wohl rezente Prozesse (etwa die beschriebenen Prozesse der Akkumulation von jungen Feinsedimenten oder plattentektonische Prozesse) st"arker f"ur Formungsprozesse in der Region verantwortlich als zuvor angenommen; damit ist hier eine morphodynamische Betrachtung angebracht.
+
+\newpage
+\enlargethispage{5cm}
+%\fbox{Fehlende, unklare Bilder erg"anzen!}
+\linespread{1.0}
+\bibliographystyle{LandPModMod}
+\bibliography{fsteeg-geomorphology} 
+
+\bibliographystyleabb{LandPMod}
+\bibliographyabb{fsteeg-geomorphology} 
+%\renewcommand{\refname}{Literatur} 
+
+\thispagestyle{empty}
+
+\end{document} 
+
