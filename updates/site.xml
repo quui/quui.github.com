@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://quui.de/updates">
+      Eclipse update site for quui software; point your update manager to this location to install the features below.
+   </description>
+   <feature url="features/com.quui.features.drawer_0.1.8.jar" id="com.quui.features.drawer" version="0.1.8">
+      <category name="com.quui"/>
+   </feature>
+   <feature url="features/com.quui.features.tc_0.2.4.jar" id="com.quui.features.tc" version="0.2.4">
+      <category name="com.quui"/>
+   </feature>
+   <feature url="features/com.quui.features.notes.editor_0.2.5.jar" id="com.quui.features.notes.editor" version="0.2.5">
+      <category name="com.quui"/>
+   </feature>
+   <feature url="features/com.quui.features.qlog_0.2.1.jar" id="com.quui.features.qlog" version="0.2.1">
+      <category name="com.quui"/>
+   </feature>
+   <feature url="features/org.eclipse.zest.dot_0.9.1.v20101003-1900.jar" id="org.eclipse.zest.dot" version="0.9.1.v20101003-1900">
+      <category name="com.quui.zest"/>
+   </feature>
+   <feature url="features/org.eclipse.zest.dot_0.10.0.v20101108-1900.jar" id="org.eclipse.zest.dot" version="0.10.0.v20101108-1900">
+      <category name="com.quui.zest"/>
+   </feature>
+   <category-def name="com.quui" label="Quui">
+      <description>
+         Quui Software for Eclipse
+      </description>
+   </category-def>
+   <category-def name="com.quui.zest" label="Zest">
+      <description>
+         Work related to Eclipse Zest
+      </description>
+   </category-def>
+</site>
